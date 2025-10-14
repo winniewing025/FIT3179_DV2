@@ -5,13 +5,10 @@
   "data": {
     "url": "crops_state.csv"
   },
-  "selection": {
-    "crop_selector": {
-      "type": "single",
-      "fields": ["crop_type"],
-      "init": {
-        "crop_type": "paddy"
-      },
+  "params": [
+    {
+      "name": "crop_selector",
+      "value": "paddy",
       "bind": {
         "input": "select",
         "options": [
@@ -28,58 +25,110 @@
         "name": "Select Crop Type: "
       }
     }
-  },
-  "transform": [
+  ],
+  "layer": [
     {
-      "filter": {
-        "selection": "crop_selector"
+      "transform": [
+        {
+          "filter": "datum.crop_type == crop_selector"
+        }
+      ],
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "state",
+          "type": "nominal",
+          "title": "State",
+          "sort": "-x",
+          "axis": {
+            "labelFontSize": 14,
+            "titleFontSize": 16
+          }
+        },
+        "x": {
+          "field": "planted_area",
+          "type": "quantitative",
+          "title": "Planted Area (hectares)",
+          "axis": {
+            "labelFontSize": 14,
+            "titleFontSize": 16
+          }
+        },
+        "tooltip": [
+          {
+            "field": "state",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "crop_type",
+            "type": "nominal",
+            "title": "Crop Type"
+          },
+          {
+            "field": "planted_area",
+            "type": "quantitative",
+            "title": "Planted Area",
+            "format": ",.1f"
+          },
+          {
+            "field": "production",
+            "type": "quantitative",
+            "title": "Production",
+            "format": ",.1f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.crop_type == crop_selector"
+        },
+        {
+          "aggregate": [{"op": "mean", "field": "planted_area", "as": "avg_area"}]
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "color": "blueviolet",
+        "strokeWidth": 2,
+        "strokeDash": [5, 5]
+      },
+      "encoding": {
+        "x": {
+          "field": "avg_area",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.crop_type == crop_selector"
+        },
+        {
+          "aggregate": [{"op": "mean", "field": "planted_area", "as": "avg_area"}]
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "dx": 0,
+        "dy": -210,
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "blueviolet"
+      },
+      "encoding": {
+        "x": {
+          "field": "avg_area",
+          "type": "quantitative"
+        },
+        "text": {
+          "value": "Average"
+        }
       }
     }
-  ],
-  "mark": "bar",
-  "encoding": {
-    "y": {
-      "field": "state",
-      "type": "nominal",
-      "title": "State",
-      "sort": "-x",
-      "axis": {
-        "labelFontSize": 14,
-        "titleFontSize": 16
-      }
-    },
-    "x": {
-      "field": "planted_area",
-      "type": "quantitative",
-      "title": "Planted Area (hectares)",
-      "axis": {
-        "labelFontSize": 14,
-        "titleFontSize": 16
-      }
-    },
-    "tooltip": [
-      {
-        "field": "state",
-        "type": "nominal",
-        "title": "State"
-      },
-      {
-        "field": "crop_type",
-        "type": "nominal",
-        "title": "Crop Type"
-      },
-      {
-        "field": "planted_area",
-        "type": "quantitative",
-        "title": "Planted Area",
-        "format": ",.1f"
-      },
-      {
-        "field": "production",
-        "type": "quantitative",
-        "title": "Production",
-        "format": ",.1f"
-      }
-    ]
-  }
+  ]
 }
