@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1560,
+  "height": 400,
+  "data": {
+    "url": "malaysia_state.topojson",
+    "format": {
+      "type": "topojson",
+      "feature": "ne_10m_admin_1_states_provinces"
+    }
+  },
+  "transform": [
+    {
+      "lookup": "properties.name",
+      "from": {
+        "data": {
+          "url": "gdp_state.csv"
+        },
+        "key": "state",
+        "fields": ["gdp_growth"]
+      }
+    }
+  ],
+  "layer": [
+    {
+      "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 1.5},
+      "encoding": {
+        "color": {
+          "field": "gdp_growth",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-5, 0, 5],
+            "range": ["#deebf7", "#9ecae1", "#3182bd", "#08519c"]
+          },
+          "title": "GDP Growth Rate(%)",
+          "legend": {
+            "orient": "top-right"
+          }
+        },
+        "tooltip": [
+          {"field": "properties.name", "type": "nominal", "title": "State"},
+          {"field": "gdp_growth", "type": "quantitative", "title": "GDP Growth (%)", "format": ".1f"}
+        ]
+      }
+    }
+  ]
+}

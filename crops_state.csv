@@ -1,0 +1,136 @@
+state,date,crop_type,planted_area,production
+Johor,2022-01-01,cash_crops,3397.3,46960.0
+Johor,2022-01-01,coconut,13269.8,124062.2
+Johor,2022-01-01,flower,1461.1,168133530.0
+Johor,2022-01-01,fruits,50217.0,772317.4
+Johor,2022-01-01,herbs,256.2,2722.4
+Johor,2022-01-01,industrial_crops,13820.5,128173.1
+Johor,2022-01-01,paddy,2776.0,10832.0
+Johor,2022-01-01,spices,1568.0,17925.1
+Johor,2022-01-01,vegetables,17188.3,245330.4
+Kedah,2022-01-01,cash_crops,496.2,4462.4
+Kedah,2022-01-01,coconut,1773.7,31787.5
+Kedah,2022-01-01,flower,40.5,718245.0
+Kedah,2022-01-01,fruits,9762.2,96009.6
+Kedah,2022-01-01,herbs,176.5,282.7
+Kedah,2022-01-01,industrial_crops,2051.5,35503.6
+Kedah,2022-01-01,paddy,213718.0,834901.0
+Kedah,2022-01-01,spices,419.9,2166.5
+Kedah,2022-01-01,vegetables,1051.2,15812.1
+Kelantan,2022-01-01,cash_crops,1597.7,18574.6
+Kelantan,2022-01-01,coconut,11435.6,77467.0
+Kelantan,2022-01-01,flower,35.9,4013423.0
+Kelantan,2022-01-01,fruits,21326.5,134277.4
+Kelantan,2022-01-01,herbs,161.8,786.4
+Kelantan,2022-01-01,industrial_crops,11593.7,78070.5
+Kelantan,2022-01-01,paddy,74017.0,272633.0
+Kelantan,2022-01-01,spices,583.0,4730.9
+Kelantan,2022-01-01,vegetables,4892.1,137912.7
+Melaka,2022-01-01,cash_crops,398.4,3120.0
+Melaka,2022-01-01,coconut,3013.8,20659.9
+Melaka,2022-01-01,flower,38.0,643850.0
+Melaka,2022-01-01,fruits,5631.5,28518.7
+Melaka,2022-01-01,herbs,14.4,59.3
+Melaka,2022-01-01,industrial_crops,3065.4,20882.7
+Melaka,2022-01-01,paddy,3318.0,10314.0
+Melaka,2022-01-01,spices,102.2,798.9
+Melaka,2022-01-01,vegetables,748.5,12181.4
+Negeri Sembilan,2022-01-01,cash_crops,446.4,5315.4
+Negeri Sembilan,2022-01-01,coconut,1491.2,14521.2
+Negeri Sembilan,2022-01-01,flower,23.5,2797007.0
+Negeri Sembilan,2022-01-01,fruits,6107.7,68198.9
+Negeri Sembilan,2022-01-01,herbs,18.2,104.7
+Negeri Sembilan,2022-01-01,industrial_crops,1554.7,15170.3
+Negeri Sembilan,2022-01-01,paddy,1313.0,4941.0
+Negeri Sembilan,2022-01-01,spices,341.9,4674.0
+Negeri Sembilan,2022-01-01,vegetables,1791.5,21022.5
+Pahang,2022-01-01,cash_crops,943.4,8412.1
+Pahang,2022-01-01,coconut,2899.7,27270.0
+Pahang,2022-01-01,flower,393.0,97549069.0
+Pahang,2022-01-01,fruits,27331.1,271797.9
+Pahang,2022-01-01,herbs,164.3,923.1
+Pahang,2022-01-01,industrial_crops,4885.8,43331.6
+Pahang,2022-01-01,paddy,13757.0,51185.0
+Pahang,2022-01-01,spices,1081.2,10571.9
+Pahang,2022-01-01,vegetables,21391.2,455641.4
+Perak,2022-01-01,cash_crops,4620.0,79518.2
+Perak,2022-01-01,coconut,7727.7,88291.6
+Perak,2022-01-01,flower,149.5,24842991.0
+Perak,2022-01-01,fruits,11588.7,101488.2
+Perak,2022-01-01,herbs,457.9,1096.7
+Perak,2022-01-01,industrial_crops,7786.7,88839.5
+Perak,2022-01-01,paddy,74594.0,269790.0
+Perak,2022-01-01,spices,430.5,2923.1
+Perak,2022-01-01,vegetables,6702.4,116765.5
+Perlis,2022-01-01,cash_crops,63.3,214.6
+Perlis,2022-01-01,coconut,575.7,4813.9
+Perlis,2022-01-01,flower,3.2,330634.0
+Perlis,2022-01-01,fruits,2266.3,7744.2
+Perlis,2022-01-01,herbs,6.8,5.7
+Perlis,2022-01-01,industrial_crops,615.6,4883.8
+Perlis,2022-01-01,paddy,60470.0,233781.0
+Perlis,2022-01-01,spices,18.0,40.1
+Perlis,2022-01-01,vegetables,542.9,2310.0
+Pulau Pinang,2022-01-01,cash_crops,157.0,1668.7
+Pulau Pinang,2022-01-01,coconut,12.3,77.8
+Pulau Pinang,2022-01-01,flower,4.5,89985.0
+Pulau Pinang,2022-01-01,fruits,2536.7,23911.1
+Pulau Pinang,2022-01-01,herbs,0.7,4.3
+Pulau Pinang,2022-01-01,industrial_crops,14.1,86.9
+Pulau Pinang,2022-01-01,paddy,24210.0,122321.0
+Pulau Pinang,2022-01-01,spices,35.6,285.6
+Pulau Pinang,2022-01-01,vegetables,687.1,8653.9
+Sabah,2022-01-01,cash_crops,1485.6,10526.0
+Sabah,2022-01-01,coconut,18631.8,61517.9
+Sabah,2022-01-01,flower,63.5,6782590.0
+Sabah,2022-01-01,fruits,20922.2,106700.0
+Sabah,2022-01-01,herbs,6.2,0.0
+Sabah,2022-01-01,industrial_crops,20836.1,64810.3
+Sabah,2022-01-01,paddy,37323.0,107565.0
+Sabah,2022-01-01,spices,452.1,2921.6
+Sabah,2022-01-01,vegetables,4353.1,46681.9
+Sarawak,2022-01-01,cash_crops,3705.3,23436.0
+Sarawak,2022-01-01,coconut,12100.3,24522.3
+Sarawak,2022-01-01,flower,77.1,1025225.0
+Sarawak,2022-01-01,fruits,36397.5,147922.3
+Sarawak,2022-01-01,herbs,637.9,2981.2
+Sarawak,2022-01-01,industrial_crops,48509.1,127987.5
+Sarawak,2022-01-01,paddy,77943.0,147272.0
+Sarawak,2022-01-01,spices,481.8,2863.1
+Sarawak,2022-01-01,vegetables,5255.3,53191.2
+Selangor,2022-01-01,cash_crops,605.6,9411.1
+Selangor,2022-01-01,coconut,9526.4,110783.8
+Selangor,2022-01-01,flower,270.5,47324681.0
+Selangor,2022-01-01,fruits,1971.6,41376.1
+Selangor,2022-01-01,herbs,82.8,758.2
+Selangor,2022-01-01,industrial_crops,9596.9,114565.9
+Selangor,2022-01-01,paddy,35539.0,153492.0
+Selangor,2022-01-01,spices,231.8,2871.7
+Selangor,2022-01-01,vegetables,2365.4,32896.7
+Terengganu,2022-01-01,cash_crops,413.0,4013.4
+Terengganu,2022-01-01,coconut,2406.5,18248.3
+Terengganu,2022-01-01,flower,11.3,258593.0
+Terengganu,2022-01-01,fruits,7184.4,27278.9
+Terengganu,2022-01-01,herbs,124.4,226.6
+Terengganu,2022-01-01,industrial_crops,3369.3,18454.1
+Terengganu,2022-01-01,paddy,18957.0,62712.0
+Terengganu,2022-01-01,spices,167.9,955.0
+Terengganu,2022-01-01,vegetables,1069.3,15052.6
+W.P. Kuala Lumpur,2022-01-01,cash_crops,0.0,0.0
+W.P. Kuala Lumpur,2022-01-01,coconut,0.0,0.0
+W.P. Kuala Lumpur,2022-01-01,flower,8.4,819724.0
+W.P. Kuala Lumpur,2022-01-01,fruits,0.0,0.0
+W.P. Kuala Lumpur,2022-01-01,herbs,0.0,0.0
+W.P. Kuala Lumpur,2022-01-01,industrial_crops,0.0,0.0
+W.P. Kuala Lumpur,2022-01-01,paddy,0.0,0.0
+W.P. Kuala Lumpur,2022-01-01,spices,0.0,0.0
+W.P. Kuala Lumpur,2022-01-01,vegetables,0.0,0.0
+W.P. Labuan,2022-01-01,cash_crops,0.0,0.0
+W.P. Labuan,2022-01-01,coconut,71.3,405.1
+W.P. Labuan,2022-01-01,flower,8.4,94235.0
+W.P. Labuan,2022-01-01,fruits,187.8,451.8
+W.P. Labuan,2022-01-01,herbs,0.0,0.0
+W.P. Labuan,2022-01-01,industrial_crops,72.2,408.4
+W.P. Labuan,2022-01-01,paddy,0.0,0.0
+W.P. Labuan,2022-01-01,spices,0.0,0.0
+W.P. Labuan,2022-01-01,vegetables,73.4,340.8

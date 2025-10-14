@@ -1,0 +1,85 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1430,
+  "height": 400,
+  "data": {
+    "url": "crops_state.csv"
+  },
+  "selection": {
+    "crop_selector": {
+      "type": "single",
+      "fields": ["crop_type"],
+      "init": {
+        "crop_type": "paddy"
+      },
+      "bind": {
+        "input": "select",
+        "options": [
+          "cash_crops",
+          "coconut",
+          "flower",
+          "fruits",
+          "herbs",
+          "industrial_crops",
+          "paddy",
+          "spices",
+          "vegetables"
+        ],
+        "name": "Select Crop Type: "
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": {
+        "selection": "crop_selector"
+      }
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "y": {
+      "field": "state",
+      "type": "nominal",
+      "title": "State",
+      "sort": "-x",
+      "axis": {
+        "labelFontSize": 14,
+        "titleFontSize": 16
+      }
+    },
+    "x": {
+      "field": "planted_area",
+      "type": "quantitative",
+      "title": "Planted Area (hectares)",
+      "axis": {
+        "labelFontSize": 14,
+        "titleFontSize": 16
+      }
+    },
+    "tooltip": [
+      {
+        "field": "state",
+        "type": "nominal",
+        "title": "State"
+      },
+      {
+        "field": "crop_type",
+        "type": "nominal",
+        "title": "Crop Type"
+      },
+      {
+        "field": "planted_area",
+        "type": "quantitative",
+        "title": "Planted Area",
+        "format": ",.1f"
+      },
+      {
+        "field": "production",
+        "type": "quantitative",
+        "title": "Production",
+        "format": ",.1f"
+      }
+    ]
+  }
+}

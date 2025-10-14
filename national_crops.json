@@ -1,0 +1,75 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 580,
+  "height": 400,
+  "data": {
+    "url": "crops_state_malaysia.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.crop_type !== 'flower'"
+    },
+    {
+      "calculate": "year(datum.date)",
+      "as": "year"
+    }
+  ],
+  "params": [
+    {
+      "name": "year_select",
+      "value": 2022,
+      "bind": {
+        "input": "select",
+        "options": [2017, 2018, 2019, 2020, 2021, 2022],
+        "name": "Select Year: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum.crop_type !== 'flower'"
+    },
+    {
+      "calculate": "year(datum.date)",
+      "as": "year"
+    },
+    {
+      "filter": {"field": "year", "equal": {"expr": "year_select"}}
+    },
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "production",
+          "as": "total_production"
+        }
+      ],
+      "groupby": ["crop_type"]
+    }
+  ],
+  "layer": [
+    {
+      "mark": {"type": "arc", "innerRadius": 80, "stroke": "#fff"}
+    }
+  ],
+  "encoding": {
+    "theta": {
+      "field": "total_production",
+      "type": "quantitative",
+      "title": "Production"
+    },
+    "color": {
+      "field": "crop_type",
+      "type": "nominal",
+      "title": "Crop Type",
+      "scale": {
+        "domain": ["paddy", "fruits", "vegetables", "industrial_crops", "cash_crops", "coconut", "spices", "herbs"],
+        "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f"]
+      }
+    },
+    "tooltip": [
+      {"field": "crop_type", "type": "nominal", "title": "Crop Type"},
+      {"field": "total_production", "type": "quantitative", "title": "Total Production", "format": ",.0f"}
+    ]
+  }
+}

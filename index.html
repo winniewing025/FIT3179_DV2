@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Malaysia's Agricultural Economy: A State-by-State Analysis</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  
+  <div class="top-banner-section">
+    <div class="banner-decoration-top"></div>
+    <div class="banner-text-container">
+      <div class="main-headline">How Malaysia's Agricultural Heartland Fuels the Nation's Economy</div>
+      <div class="sub-headline">An analysis of the relationship between agricultural production and economic growth across Malaysian states</div>
+    </div>
+    <div class="banner-decoration-bottom"></div>
+  </div>
+
+  <div class="main-content-wrapper">
+    <div class="content-box introduction-box">
+      <div class="box-inner-content">
+        <h2>Introduction</h2>
+        <p class="story-text">
+          Agriculture is a key sector, but its contribution varies wildly across the country. This visual story explores the landscape of Malaysian agriculture, revealing which states are the powerhouses, what they grow, and how this cultivation translates into economic well-being. We will navigate from a broad economic overview down to the specific crops that feed the nation and drive growth.
+        </p>
+        <div class="important-note-box">
+          <p><strong>Key Insight:</strong> While agriculture forms the backbone of many state economies, the relationship between production volume and economic growth is far from straightforward. High production doesn't always translate to strong GDP growth, suggesting other economic factors are at play.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-box">
+      <div class="box-title-bar">
+        <h2>🗺️ Economic Performance Across Malaysian States</h2>
+      </div>
+      <div class="box-inner-content">
+        <p class="story-text">
+          This choropleth map reveals which Malaysian states have the strongest agricultural sectors relative to their overall economy. The colour intensity of each state represents the contribution of agriculture to its Gross Domestic Product (GDP). States with positive GDP growth and robust agricultural production are shown in darker blue, highlighting regions where farming significantly contributes to economic prosperity. The central and northern regions, including <strong>Pulau Pinang</strong> and <strong>Pahang</strong>, show robust GDP growth. In contrast, the eastern states of <strong>Terengganu</strong> and <strong>Kelantan</strong> are facing significant economic contraction. This immediate visual raises a critical question: <strong>Is there a link between a state's economic performance and its agricultural output?</strong>
+        </p>
+        <div class="chart-holder">
+          <div id="map-visualization"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-box">
+      <div class="box-title-bar">
+        <h2>🌾 Agricultural Specialization by State</h2>
+      </div>
+      <div class="box-inner-content">
+        <p class="story-text">
+          Here, we shift our focus from the economy to the fields. This chart reveals the unique agricultural identity of each state. <strong>Kedah</strong> leads in paddy with over 213,000 hectares, establishing itself as the nation's rice bowl. Meanwhile, <strong>Johor</strong> achieves significant fruit production with just 50,217 hectares producing 772,000 tonnes of fruits, demonstrating remarkable efficiency. <strong>Sarawak</strong> follows with 36,000+ hectares dedicated to fruit cultivation. These states have developed the infrastructure, climate, and expertise for tropical fruit production. For <strong>industrial crops</strong>, Sarawak dominates with nearly 48,500 hectares, followed by Johor and Pahang. For <strong>vegetables</strong>, Johor and Pahang lead the nation, showcasing their commitment to domestic food security.
+        </p>
+        <div class="chart-holder">
+          <div id="crop-bar-chart"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-charts-row">
+      <div class="content-box half-width-chart">
+        <div class="box-title-bar">
+          <h2>📊 Production vs Growth</h2>
+        </div>
+        <div class="box-inner-content">
+          <p class="story-text">
+            This chart shows the relationship between total crop production and GDP growth. Each circle represents a state, with its size reflecting its production volume. If agriculture were the sole driver of growth, we would see a clear upward trend from left to right. However, the reality is more complex.
+          </p>
+          <p class="story-text">
+            <strong>Johor</strong> has the highest total agricultural production by a significant margin, yet its GDP growth is a modest 1.9%. This suggests that while its agricultural sector is massive, other sectors may be weighing on its overall growth, or it faces challenges in translating volume into high value. <strong>Pahang</strong> has a respectable level of production but achieves the highest GDP growth at 4.9%. This indicates a highly productive and potentially more valuable agricultural sector, or more likely, a strong, diversified economy where other industries are driving growth.
+          </p>
+          <div class="chart-holder">
+            <div id="scatter-plot-chart"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-box half-width-chart">
+        <div class="box-title-bar">
+          <h2>🥘 National Crop Composition</h2>
+        </div>
+        <div class="box-inner-content">
+          <p class="story-text">
+            The donut chart shows the composition of Malaysia's agricultural output. For years, <strong>paddy</strong> and <strong>fruits</strong> have formed the backbone of the nation's crop production, highlighting their fundamental role in food security and the agricultural economy.
+          </p>
+          <p class="story-text">
+            Note that <strong>flowers</strong> are filtered out here. While they can be a high-value export, their production volume is measured in units (e.g., stems), which is not directly comparable to the weight-based metrics (tonnes) of food crops. This focused view allows for a clearer comparison of the primary food commodities that sustain the nation.
+          </p>
+          <div class="chart-holder">
+            <div id="donut-chart"></div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <p><strong>FIT3179 Data Visualisation 2 Assignment</strong></p>
+    <p>Data Sources: Department of Statistics Malaysia, Ministry of Agriculture and Food Industries</p>
+    <p>Created by Winnie Ng (33523274)</p>
+  </div>
+
+  <script>
+    vegaEmbed('#map-visualization', 'gdp_by_state.json');
+    vegaEmbed('#crop-bar-chart', 'crop_production_by_state.json');
+    vegaEmbed('#scatter-plot-chart', 'agriculture_gdp.json');
+    vegaEmbed('#donut-chart', 'national_crops.json');
+  </script>
+  
+</body>
+</html>

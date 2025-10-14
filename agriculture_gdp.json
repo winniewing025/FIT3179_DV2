@@ -1,0 +1,59 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 400,
+  "data": {
+    "url": "crops_state.csv"
+  },
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "production",
+          "as": "total_production"
+        }
+      ],
+      "groupby": ["state"]
+    },
+    {
+      "lookup": "state",
+      "from": {
+        "data": {
+          "url": "gdp_state.csv"
+        },
+        "key": "state",
+        "fields": ["gdp_growth"]
+      }
+    }
+  ],
+  "mark": "circle",
+  "encoding": {
+    "x": {
+      "field": "total_production",
+      "type": "quantitative",
+      "title": "Total Crop Production",
+      "axis": {"format": ".2s"}
+    },
+    "y": {
+      "field": "gdp_growth",
+      "type": "quantitative",
+      "title": "GDP Growth Rate (%)"
+    },
+    "size": {
+      "field": "total_production",
+      "type": "quantitative",
+      "legend": {"title": "Production Size"}
+    },
+    "color": {
+      "field": "state",
+      "type": "nominal",
+      "legend": {"title": "State"}
+    },
+    "tooltip": [
+      {"field": "state", "type": "nominal", "title": "State"},
+      {"field": "gdp_growth", "type": "quantitative", "title": "GDP Growth (%)", "format": ".1f"},
+      {"field": "total_production", "type": "quantitative", "title": "Total Production", "format": ",.0f"}
+    ]
+  }
+}
