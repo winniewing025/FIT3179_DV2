@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 1430,
+  "width": "container",
   "height": 400,
   "data": {
     "url": "crops_state.csv"
@@ -41,8 +41,8 @@
           "title": "State",
           "sort": "-x",
           "axis": {
-            "labelFontSize": 14,
-            "titleFontSize": 16
+            "labelFontSize": 12,
+            "titleFontSize": 14
           }
         },
         "x": {
@@ -50,8 +50,8 @@
           "type": "quantitative",
           "title": "Planted Area (hectares)",
           "axis": {
-            "labelFontSize": 14,
-            "titleFontSize": 16
+            "labelFontSize": 12,
+            "titleFontSize": 14
           }
         },
         "tooltip": [
@@ -116,7 +116,7 @@
         "align": "center",
         "dx": 0,
         "dy": -210,
-        "fontSize": 12,
+        "fontSize": 11,
         "fontWeight": "bold",
         "color": "blueviolet"
       },
