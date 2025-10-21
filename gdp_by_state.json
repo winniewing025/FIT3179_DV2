@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 1560,
+  "width": "container",
   "height": 400,
   "data": {
     "url": "malaysia_state.topojson",
@@ -41,6 +41,46 @@
           {"field": "properties.name", "type": "nominal", "title": "State"},
           {"field": "gdp_growth", "type": "quantitative", "title": "GDP Growth (%)", "format": ".1f"}
         ]
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.properties.name == 'Pahang'"},
+        {"calculate": "103.5", "as": "lon"},
+        {"calculate": "3.8", "as": "lat"}
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#ff7f0e",
+        "dx": 50,
+        "dy": -5
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"value": "Highest: 4.9%"}
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.properties.name == 'Terengganu'"},
+        {"calculate": "103.0", "as": "lon"},
+        {"calculate": "5.3", "as": "lat"}
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fontWeight": "bold",
+        "color": "#9467bd",
+        "dx": 60,
+        "dy": -5
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"value": "Lowest: -4.2%"}
       }
     }
   ]
