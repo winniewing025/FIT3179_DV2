@@ -46,9 +46,9 @@
           }
         },
         "x": {
-          "field": "planted_area",
+          "field": "production",
           "type": "quantitative",
-          "title": "Planted Area (hectares)",
+          "title": "Total Production (tonnes)",
           "axis": {
             "labelFontSize": 12,
             "titleFontSize": 14
@@ -86,7 +86,7 @@
           "filter": "datum.crop_type == crop_selector"
         },
         {
-          "aggregate": [{"op": "mean", "field": "planted_area", "as": "avg_area"}]
+          "aggregate": [{"op": "mean", "field": "production", "as": "avg_production"}]
         }
       ],
       "mark": {
@@ -97,7 +97,7 @@
       },
       "encoding": {
         "x": {
-          "field": "avg_area",
+          "field": "avg_production",
           "type": "quantitative"
         }
       }
@@ -108,7 +108,7 @@
           "filter": "datum.crop_type == crop_selector"
         },
         {
-          "aggregate": [{"op": "mean", "field": "planted_area", "as": "avg_area"}]
+          "aggregate": [{"op": "mean", "field": "production", "as": "avg_production"}]
         }
       ],
       "mark": {
@@ -122,7 +122,7 @@
       },
       "encoding": {
         "x": {
-          "field": "avg_area",
+          "field": "avg_production",
           "type": "quantitative"
         },
         "text": {
