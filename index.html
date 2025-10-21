@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
   <title>Malaysia's Agricultural Economy: A State-by-State Analysis</title>
-  <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
   <div class="top-banner-section">
     <div class="banner-decoration-top"></div>
     <div class="banner-text-container">
@@ -21,18 +20,60 @@
   <div class="main-content-wrapper">
     <div class="content-box introduction-box">
       <div class="box-inner-content">
-        <h1>Introduction</h1>
-        <p class="story-text">
-          Agriculture is a key sector in Malaysia, but its contribution varies significantly across states. This analysis explores which states are agricultural powerhouses, what they grow, and how this relates to economic performance.
-        </p>
-        <div class="important-note-box">
-          <p><strong>Key Findings:</strong></p>
-          <ul>
-            <li>High agricultural production doesn't always correlate with strong GDP growth</li>
-            <li>Johor leads in total production but shows modest economic growth</li>
-            <li>Pahang achieves the highest GDP growth despite moderate production</li>
-            <li>Eastern states face economic challenges despite agricultural activities</li>
-          </ul>
+        <div class="intro-grid">
+          <div class="intro-text-section">
+            <h1>Introduction</h1>
+            <p class="intro-description">
+              Agriculture is a key sector in Malaysia, but its contribution varies significantly across states. Some regions specialize in specific crops while others maintain balanced production. Understanding these patterns helps identify economic opportunities.
+            </p>
+            <p class="intro-description">
+              This analysis explores which states are agricultural powerhouses, what they grow, and how this relates to economic performance.
+            </p>
+          </div>
+          
+          <div class="findings-section">
+            <div class="findings-grid">
+              <div class="finding-card">
+                <div class="finding-icon-container">
+                  <span class="finding-icon">🌱</span>
+                </div>
+                <div class="finding-content">
+                  <div class="finding-title">Diverse Agricultural Landscape</div>
+                  <p class="finding-text">Malaysia's states cultivate a wide variety of crops based on regional conditions</p>
+                </div>
+              </div>
+              
+              <div class="finding-card">
+                <div class="finding-icon-container">
+                  <span class="finding-icon">🏞️</span>
+                </div>
+                <div class="finding-content">
+                  <div class="finding-title">Regional Specialization</div>
+                  <p class="finding-text">Different states focus on specific agricultural products based on geography</p>
+                </div>
+              </div>
+              
+              <div class="finding-card">
+                <div class="finding-icon-container">
+                  <span class="finding-icon">📊</span>
+                </div>
+                <div class="finding-content">
+                  <div class="finding-title">Economic Impact Analysis</div>
+                  <p class="finding-text">Exploring how agricultural production relates to state economic performance</p>
+                </div>
+              </div>
+              
+              <div class="finding-card">
+                <div class="finding-icon-container">
+                  <span class="finding-icon">🔍</span>
+                </div>
+                <div class="finding-content">
+                  <div class="finding-title">Pattern Recognition</div>
+                  <p class="finding-text">Identifying relationships between crop types and regional development</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -43,7 +84,7 @@
       </div>
       <div class="box-inner-content">
         <p class="story-text">
-          This map shows GDP growth rates across Malaysian states. States in blue shades show positive growth, while red shades indicate economic contraction.
+          This choropleth map displays GDP growth rates across Malaysian states. The color gradient from light to dark blue indicates increasing GDP growth
         </p>
         <div class="chart-holder">
           <div id="map-visualization"></div>
@@ -65,7 +106,7 @@
       </div>
       <div class="box-inner-content">
         <p class="story-text">
-          The visualisation below shows total crop production across Malaysian states in 2022:
+          The interactive bar chart below shows the total crop production across Malaysian states in 2022:
         </p>
         <div class="chart-holder">
           <div id="crop-bar-chart"></div>
@@ -76,10 +117,10 @@
         <div class="chart-annotations">
           <p><strong>Key Specializations:</strong></p>
           <ul>
-            <li><strong>Kedah:</strong> Malaysia's rice bowl with 213,000+ hectares of paddy</li>
-            <li><strong>Johor:</strong> Leader in fruit production efficiency</li>
-            <li><strong>Sarawak:</strong> Dominates industrial crops (48,500+ hectares)</li>
-            <li><strong>Johor & Pahang:</strong> Lead in vegetable production</li>
+            <li><strong>Kedah:</strong> Major paddy producers with the largest planted area</li>
+            <li><strong>Johor:</strong> Dominates in fruit, flower and spices</li>
+            <li><strong>Sarawak:</strong> Leads in herbs and industrial crops</li>
+            <li><strong>Pahang:</strong> Lead in vegetable production</li>
           </ul>
         </div>
       </div>
@@ -92,6 +133,7 @@
         </div>
         <div class="box-inner-content">
           <p class="story-text">
+            Agricultural production varies across Malaysian states, reflecting diverse climatic conditions, land availability, and regional specialization.
             This scatter plot examines the relationship between agricultural production and economic in 2022:
           </p>
           <div class="chart-holder">
@@ -102,8 +144,8 @@
             <ul>
               <li><strong>Johor:</strong> Highest production but only 1.9% GDP growth</li>
               <li><strong>Pahang:</strong> Highest GDP (4.9%) despite moderate agricultural production level</li>
+              <li><strong>Terengganu and Kelantan:</strong> Lowest GDP growth rate</li>
               <li><strong>No clear correlation:</strong> Production volume alone doesn't determine economic performance</li>
-              <li><strong>Economic diversification:</strong> States with balanced economies perform better</li>
             </ul>
           </div>
         </div>
