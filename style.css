@@ -251,18 +251,18 @@ body {
 }
 
 .page-footer {
-  background: linear-gradient(135deg, var(--dark-blue), var(--medium-blue));
-  color: white;
+  background: linear-gradient(135deg, #f0f7ff, #e3f2fd);
+  color: var(--dark-blue);
   text-align: center;
   padding: 2rem 1.5rem;
   margin-top: 2rem;
-  border-top: 4px solid var(--accent-orange);
+  border-top: 4px solid var(--medium-blue);
 }
 
 .page-footer p {
   margin: 0.5rem 0;
   font-size: 0.95rem;
-  opacity: 0.9;
+  color: var(--dark-text);
 }
 
 .page-footer ul {
@@ -274,15 +274,17 @@ body {
 .page-footer li {
   margin: 0.3rem 0;
   font-size: 0.9rem;
-  opacity: 0.8;
+  color: var(--medium-text);
 }
 
 .page-footer a {
-  color: var(--light-blue);
+  color: var(--medium-blue);
   text-decoration: none;
-  transition: opacity 0.2s;
+  transition: all 0.2s;
+  font-weight: 500;
 }
 
 .page-footer a:hover {
-  opacity: 0.8;
+  color: var(--dark-blue);
+  text-decoration: underline;
 }
