@@ -53,14 +53,14 @@
         "type": "text",
         "fontSize": 12,
         "fontWeight": "bold",
-        "color": "#ff7f0e",
-        "dx": 50,
-        "dy": -5
+        "color": "blueviolet",
+        "dx": 110,
+        "dy": 20
       },
       "encoding": {
         "longitude": {"field": "lon", "type": "quantitative"},
         "latitude": {"field": "lat", "type": "quantitative"},
-        "text": {"value": "Highest: 4.9%"}
+        "text": {"value": "Pahang: Highest GDP Growth at 4.9%"}
       }
     },
     {
@@ -73,14 +73,14 @@
         "type": "text",
         "fontSize": 12,
         "fontWeight": "bold",
-        "color": "#9467bd",
-        "dx": 60,
-        "dy": -5
+        "color": "blueviolet",
+        "dx": 80,
+        "dy": -50
       },
       "encoding": {
         "longitude": {"field": "lon", "type": "quantitative"},
         "latitude": {"field": "lat", "type": "quantitative"},
-        "text": {"value": "Lowest: -4.2%"}
+        "text": {"value": "Kelantan: Lowest GDP Growth at -4.9%"}
       }
     }
   ]
