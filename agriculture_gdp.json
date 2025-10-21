@@ -103,10 +103,10 @@
         "type": "text",
         "align": "left",
         "dx": 20,
-        "dy": 0,
+        "dy": -15,
         "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#9467bd"
+        "color": "blueviolet"
       },
       "encoding": {
         "x": {"field": "total_production", "type": "quantitative"},
@@ -122,10 +122,10 @@
         "type": "text",
         "align": "center",
         "dx": -50,
-        "dy": -40,
+        "dy": -35,
         "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#2ca02c"
+        "color": "blueviolet"
       },
       "encoding": {
         "x": {"field": "total_production", "type": "quantitative"},
