@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 500,
-  "height": 400,
+  "width": "container",
+  "height": 430,
   "data": {
     "url": "crops_state.csv"
   },
@@ -27,33 +27,111 @@
       }
     }
   ],
-  "mark": "circle",
-  "encoding": {
-    "x": {
-      "field": "total_production",
-      "type": "quantitative",
-      "title": "Total Crop Production",
-      "axis": {"format": ".2s"}
+  "layer": [
+    {
+      "mark": "circle",
+      "encoding": {
+        "x": {
+          "field": "total_production",
+          "type": "quantitative",
+          "title": "Total Crop Production (tonnes)",
+          "axis": {"format": ".2s"}
+        },
+        "y": {
+          "field": "gdp_growth",
+          "type": "quantitative",
+          "title": "GDP Growth Rate (%)"
+        },
+        "size": {
+          "field": "total_production",
+          "type": "quantitative",
+          "scale": {"rangeMax": 2000, "rangeMin": 100},
+          "legend": {"title": "Production Size"}
+        },
+        "color": {
+          "field": "state",
+          "type": "nominal",
+          "scale": {
+            "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf", "#aec7e8", "#ffbb78"]
+          },
+          "legend": {"title": "State"}
+        },
+        "tooltip": [
+          {"field": "state", "type": "nominal", "title": "State"},
+          {"field": "gdp_growth", "type": "quantitative", "title": "GDP Growth (%)", "format": ".1f"},
+          {"field": "total_production", "type": "quantitative", "title": "Total Production", "format": ",.0f"}
+        ]
+      }
     },
-    "y": {
-      "field": "gdp_growth",
-      "type": "quantitative",
-      "title": "GDP Growth Rate (%)"
+    {
+      "transform": [
+        {"aggregate": [{"op": "mean", "field": "gdp_growth", "as": "avg_gdp"}]}
+      ],
+      "mark": {
+        "type": "rule",
+        "color": "#0066CC",
+        "strokeWidth": 2,
+        "strokeDash": [5, 5]
+      },
+      "encoding": {
+        "y": {"field": "avg_gdp", "type": "quantitative"}
+      }
     },
-    "size": {
-      "field": "total_production",
-      "type": "quantitative",
-      "legend": {"title": "Production Size"}
+    {
+      "transform": [
+        {"aggregate": [{"op": "mean", "field": "gdp_growth", "as": "avg_gdp"}]}
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -10,
+        "dy": -15,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#0066CC"
+      },
+      "encoding": {
+        "y": {"field": "avg_gdp", "type": "quantitative"},
+        "text": {"value": "Average GDP Growth"}
+      }
     },
-    "color": {
-      "field": "state",
-      "type": "nominal",
-      "legend": {"title": "State"}
+    {
+      "transform": [
+        {"filter": "datum.state == 'Pahang'"}
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 20,
+        "dy": 0,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#9467bd"
+      },
+      "encoding": {
+        "x": {"field": "total_production", "type": "quantitative"},
+        "y": {"field": "gdp_growth", "type": "quantitative"},
+        "text": {"value": "Pahang: High GDP Growth"}
+      }
     },
-    "tooltip": [
-      {"field": "state", "type": "nominal", "title": "State"},
-      {"field": "gdp_growth", "type": "quantitative", "title": "GDP Growth (%)", "format": ".1f"},
-      {"field": "total_production", "type": "quantitative", "title": "Total Production", "format": ",.0f"}
-    ]
-  }
+    {
+      "transform": [
+        {"filter": "datum.state == 'Johor'"}
+      ],
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "dx": -50,
+        "dy": -40,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#2ca02c"
+      },
+      "encoding": {
+        "x": {"field": "total_production", "type": "quantitative"},
+        "y": {"field": "gdp_growth", "type": "quantitative"},
+        "text": {"value": "Johor: High Agricultural Production"}
+      }
+    }
+  ]
 }
